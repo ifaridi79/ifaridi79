@@ -1,0 +1,10 @@
+Use the TDD loop to begin implementing a basic calculator application.
+Red, Green,  Refactor.
+
+In the test file, enable a test/test-suite by deleting the '@Disabled' line that precedes it.
+
+Use 'gradle test' to execute tests.
+
+See the solutions folder for example solutions.
+
+To run the application run 'gradle run' and run the jar file using appropriate java commands.

@@ -1,0 +1,79 @@
+
+
+
+# Reflexive Tests
+
+return input.trim();
+
+# Addition Tests
+
+String[] tokens = input.trim().split(" ");
+if (tokens.length > 1) {
+  int arg1 = Integer.parseInt(tokens[0]);
+  int arg2 = Integer.parseInt(tokens[2]);
+  int sum = arg1 + arg2;
+  return Integer.toString(sum);
+}
+else {
+  return input.trim();
+}
+
+# Multiplication Tests
+
+String[] tokens = input.trim().split(" ");  
+if (tokens.length > 1) { 
+  int arg1 = Integer.parseInt(tokens[0]);
+  int arg2 = Integer.parseInt(tokens[2]);
+  String op = tokens[1];
+  if (op.equals("+")) {
+    int sum = arg1 + arg2;
+    return Integer.toString(sum);
+  }
+  else {
+    int product = arg1 * arg2;
+    return Integer.toString(product); 
+  }
+}    
+else { 
+  return input.trim();
+}
+
+# Refactor to be explicit about operation
+# Initialize result at beginning and return result at end
+
+String[] tokens = input.trim().split(" ");    
+String result = input.trim();
+if (tokens.length > 1) {    
+  int arg1 = Integer.parseInt(tokens[0]);    
+  int arg2 = Integer.parseInt(tokens[2]);    
+  String op = tokens[1];
+  if (op.equals("+")) {
+    result = Integer.toString(arg1 + arg2);    
+  }   
+  else if (op.equals("*")) {
+    result = Integer.toString(arg1 * arg2);    
+  }   
+}    
+return result;
+    
+    
+# Division Tests 
+Add assert throws to import in test file
+
+String[] tokens = input.trim().split(" ");                                                                                               
+String result = input.trim();
+if (tokens.length > 1) {                                                                                                                 
+  int arg1 = Integer.parseInt(tokens[0]);                                                                                                
+  int arg2 = Integer.parseInt(tokens[2]);                                                                                                
+  String op = tokens[1];
+  if (op.equals("+")) {
+    result = Integer.toString(arg1 + arg2); 
+  }
+  else if (op.equals("*")) {
+    result = Integer.toString(arg1 * arg2);    
+  }   
+  else if (op.equals("/")) {
+    result = Integer.toString(arg1 / arg2);                                                                                          
+  }   
+}                                                                                                                                        
+return result;
